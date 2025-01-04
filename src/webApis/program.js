@@ -1,17 +1,27 @@
 import express from "express";
 
+//==================================================================================================
+// Configuracion base de Express
+//==================================================================================================
+
 class Program {
-  static #setMiddleware = ({ application: app } = express) => {
-    app.use(express.json);
+  constructor() {
+    if (this instanceof Program) {
+      throw Error("Esta clase no puede ser instaseada");
+    }
+  }
+
+  static #setMiddleware = (app) => {
+    app.use(express.json());
     // Analizar solicitued https
     app.use(express.urlencoded({ extended: true }));
   };
 
-  static #setRoutes = ({ application: app } = express, routes) => {
+  static #setRoutes = (app, routes) => {
     app.use(routes);
   };
 
-  static #setListen = ({ application: app } = express, port) => {
+  static #setListen = (app, port) => {
     app.listen(port, () => {
       console.log(`http://localhost:${port}/`);
     });
