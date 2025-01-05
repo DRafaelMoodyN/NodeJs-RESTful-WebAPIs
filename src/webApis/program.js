@@ -7,7 +7,7 @@ import express from "express";
 class Program {
   constructor() {
     if (this instanceof Program) {
-      throw Error("Esta clase no puede ser instaseada");
+      throw new Error("Esta clase no puede ser instaseada");
     }
   }
 

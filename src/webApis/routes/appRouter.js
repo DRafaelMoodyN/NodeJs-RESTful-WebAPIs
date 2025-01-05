@@ -3,7 +3,7 @@ import PersonRouter from "./personRouter.js";
 class AppRouter {
   constructor() {
     if (this instanceof AppRouter) {
-      throw Error("Esta clase no puede tener instancia");
+      throw new Error("Esta clase no puede tener instancia");
     }
   }
 

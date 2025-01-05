@@ -3,7 +3,7 @@ import { request, response } from "express";
 class JoiValidate {
   constructor() {
     if (this instanceof JoiValidate) {
-      throw Error("Esta clase no puede ser instanciada");
+      throw new Error("Esta clase no puede ser instanciada");
     }
   }
 

@@ -3,7 +3,7 @@ import { request, response } from "express";
 class PersonController {
   constructor() {
     if (this instanceof PersonController) {
-      throw Error("Esta clase no puede ser instaceada");
+      throw new Error("Esta clase no puede ser instaceada");
     }
   }
 
