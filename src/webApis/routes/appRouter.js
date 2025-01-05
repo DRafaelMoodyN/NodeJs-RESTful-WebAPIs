@@ -8,8 +8,6 @@ class AppRouter {
   }
 
   static getRouter = (router) => {
-    console.log("router");
-
     router.use("/person", PersonRouter.setRoute(router));
 
     return router;

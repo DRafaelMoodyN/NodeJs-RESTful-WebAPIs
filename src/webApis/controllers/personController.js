@@ -7,8 +7,12 @@ class PersonController {
     }
   }
 
-  static getPerson = (req = request, res = response) => {
-    res.status(200).json({ result: "get person 1" });
+  static create = (req = request, res = response) => {
+    res.status(200).json({ result: "create person" });
+  };
+
+  static list = (req = request, res = response) => {
+    res.status(200).json({ result: "get person" });
   };
 }
 
