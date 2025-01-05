@@ -1,4 +1,4 @@
-import PersonRouter from "./personRouter.js";
+import UserRouter from "./userRouter.js";
 
 class AppRouter {
   constructor() {
@@ -8,7 +8,7 @@ class AppRouter {
   }
 
   static getRouter = (router) => {
-    router.use("/person", PersonRouter.setRoute(router));
+    router.use("/user", UserRouter.setRoute(router));
 
     return router;
   };

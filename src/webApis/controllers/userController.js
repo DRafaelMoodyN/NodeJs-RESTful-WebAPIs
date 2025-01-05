@@ -1,6 +1,6 @@
 import { request, response } from "express";
 
-class PersonController {
+class UserController {
   constructor() {
     if (this instanceof PersonController) {
       throw new Error("Esta clase no puede ser instaceada");
@@ -16,4 +16,4 @@ class PersonController {
   };
 }
 
-export default PersonController;
+export default UserController;
