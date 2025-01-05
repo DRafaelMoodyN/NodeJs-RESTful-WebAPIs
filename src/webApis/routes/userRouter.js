@@ -4,7 +4,7 @@ import JoiValidate from "../middleware/joinValidate.js";
 
 class UserRouter {
   constructor() {
-    if (this instanceof PersonRouter) {
+    if (this instanceof UserRouter) {
       throw new Error("Esta clases no puede tener instancia");
     }
   }

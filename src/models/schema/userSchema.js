@@ -1,5 +1,5 @@
+import mongoose from "mongoose";
 import { Schema } from "mongoose";
-import MongoDbContext from "../context/mongoDbContext";
 
 const userSchema = new Schema({
   userName: {
@@ -29,6 +29,6 @@ const userSchema = new Schema({
   },
 });
 
-const UserSchema = MongoDbContext.getModel("User", userSchema);
+const UserSchema = mongoose.model("User", userSchema);
 
 export default UserSchema;
